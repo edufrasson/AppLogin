@@ -4,7 +4,11 @@ using System.Text;
 
 namespace AppLogin.Model
 {
-    internal class Usuario
+    public class Usuario
     {
+        public string Email { get; set; }
+        public string Nome { get; set; }
+        public string Senha { get; set; }
+
     }
 }

@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace AppLogin.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Protegida : ContentView
+    public partial class Protegida : ContentPage
     {
         public Protegida()
         {

@@ -1,10 +1,39 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppLogin.View.View1">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
-</ContentView>
+             x:Class="AppLogin.View.Login"
+             Padding="10">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+            <GradientStop Color="Purple" Offset="0.3"/>
+            <GradientStop Color="Red" Offset="1.1"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame CornerRadius="10"
+                   x:Name="frm_login"
+                   
+                   HasShadow="False"
+                   VerticalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Label Text="Login de Usuários"
+                           TextTransform="Uppercase"
+                           FontSize="Title"                           
+                           HorizontalTextAlignment="Center" />
+
+                    <Label Text="E-mail:" />
+                    <Entry x:Name="txt_email"
+                           TextColor="White"
+                           Placeholder="Seu email de cadastro" />
+
+                    <Label Text="Senha:" />
+                    <Entry x:Name="txt_senha" Placeholder="Sua senha" IsPassword="True" />
+
+                    <Button Text="Entrar" Clicked="Button_Clicked" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
